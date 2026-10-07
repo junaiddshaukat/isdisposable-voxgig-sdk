@@ -1,0 +1,18 @@
+# BasicBulkFlow
+
+main: kit: flow: BasicBulkFlow:
+{
+  entity: "bulk",
+  kind: "basic",
+  name: "BasicBulkFlow",
+  step: [
+    {
+      i: {
+        ref: "bulk_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicBulkFlow"
+}

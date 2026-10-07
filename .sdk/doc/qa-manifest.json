@@ -1,0 +1,17 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "API status",
+      "Bulk check results",
+      "Check result",
+      "Real-time disposable email detection with DNS/MX checks, risk scoring and domain age. Docs: https://isdisposable.com/docs/api-reference",
+      "Risk score from 0 (safe) to 100 (definitely disposable).",
+      "The email address to check."
+    ]
+  }
+}

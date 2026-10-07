@@ -1,0 +1,31 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      description: `Real-time disposable email detection with DNS/MX checks, risk scoring and domain age. Docs: https://isdisposable.com/docs/api-reference
+`
+      license: {
+        name: "MIT"
+      }
+      security: {
+        in: "header"
+        name: "x-api-key"
+        prefix: ""
+        scheme: "ApiKeyAuth"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          url: "https://isdisposable.com/api"
+        }
+      ]
+      summary: "Real-time disposable email detection with DNS/MX checks, risk scoring and domain age."
+      title: "isDisposable API"
+      version: "1.0.0"
+      website: "https://isdisposable.com"
+    }
+  }
+}
+

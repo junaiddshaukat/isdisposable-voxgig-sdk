@@ -1,0 +1,60 @@
+{
+  "existing": {
+    "check": {
+      "CHECK00": {
+        "cached": true,
+        "disposable": false,
+        "domain": "s52",
+        "domain_age_days": 83,
+        "email": "s54",
+        "mx_valid": false,
+        "reason": "s56",
+        "score": 87,
+        "id": "CHECK00"
+      },
+      "CHECK01": {
+        "cached": true,
+        "disposable": false,
+        "domain": "sa2",
+        "domain_age_days": 163,
+        "email": "sa4",
+        "mx_valid": false,
+        "reason": "sa6",
+        "score": 167,
+        "id": "CHECK01"
+      },
+      "CHECK02": {
+        "cached": true,
+        "disposable": false,
+        "domain": "sf2",
+        "domain_age_days": 243,
+        "email": "sf4",
+        "mx_valid": false,
+        "reason": "sf6",
+        "score": 247,
+        "id": "CHECK02"
+      }
+    }
+  },
+  "new": {
+    "check": {
+      "check_ref01": {
+        "cached": true,
+        "disposable": false,
+        "domain": "s142",
+        "domain_age_days": 323,
+        "email": "s144",
+        "mx_valid": false,
+        "reason": "s146",
+        "score": 327
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/check": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+# BasicCheckFlow
+
+main: kit: flow: BasicCheckFlow:
+{
+  entity: "check",
+  kind: "basic",
+  name: "BasicCheckFlow",
+  step: [
+    {
+      i: {
+        ref: "check_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCheckFlow"
+}

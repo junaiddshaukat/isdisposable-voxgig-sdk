@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "bulk": {
+      "BULK00": {
+        "emails": [],
+        "results": [],
+        "id": "BULK00"
+      },
+      "BULK01": {
+        "emails": [],
+        "results": [],
+        "id": "BULK01"
+      },
+      "BULK02": {
+        "emails": [],
+        "results": [],
+        "id": "BULK02"
+      }
+    }
+  },
+  "new": {
+    "bulk": {
+      "bulk_ref01": {
+        "emails": [],
+        "results": []
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/check/bulk": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+# Entity: bulk
+
+main: kit: entity: bulk: {
+
+  alias: field: {}
+
+  fields: {
+    emails: {
+      h: "Emails"
+      n: "emails"
+      r: true
+      t: "`$ARRAY`"
+    }
+    results: {
+      h: "Results"
+      n: "results"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "bulk"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/check/bulk"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/check/bulk"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "check"
+            }
+            {
+              lit: "bulk"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,102 @@
+# Entity: check
+
+main: kit: entity: check: {
+
+  alias: field: {}
+
+  fields: {
+    cached: {
+      h: "Cached"
+      n: "cached"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    disposable: {
+      h: "Disposable"
+      n: "disposable"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    domain: {
+      h: "Domain"
+      n: "domain"
+      r: false
+      t: "`$STRING`"
+    }
+    domain_age_days: {
+      h: "Domain Age Days"
+      n: "domain_age_days"
+      r: false
+      t: "`$INTEGER`"
+    }
+    email: {
+      h: "Email"
+      n: "email"
+      op: {
+        create: {
+          req: true
+          type: "`$STRING`"
+        }
+      }
+      r: false
+      sh: "The email address to check."
+      t: "`$STRING`"
+    }
+    mx_valid: {
+      h: "Mx Valid"
+      n: "mx_valid"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    reason: {
+      h: "Reason"
+      n: "reason"
+      r: false
+      t: "`$STRING`"
+    }
+    score: {
+      h: "Score"
+      n: "score"
+      r: false
+      sh: "Risk score from 0 (safe) to 100 (definitely disposable)."
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "check"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/check"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/check"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "check"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

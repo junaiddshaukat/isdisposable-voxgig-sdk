@@ -1,0 +1,144 @@
+openapi: 3.0.3
+info:
+  title: isDisposable API
+  version: 1.0.0
+  description: >
+    Real-time disposable email detection with DNS/MX checks, risk scoring
+    and domain age. Docs: https://isdisposable.com/docs/api-reference
+  license:
+    name: MIT
+servers:
+  - url: https://isdisposable.com/api
+security:
+  - ApiKeyAuth: []
+paths:
+  /v1/check:
+    post:
+      operationId: checkEmail
+      summary: Check a single email address.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckRequest'
+      responses:
+        '200':
+          description: Check result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Check'
+        '400':
+          $ref: '#/components/responses/Error'
+        '401':
+          $ref: '#/components/responses/Error'
+        '429':
+          $ref: '#/components/responses/Error'
+  /v1/check/bulk:
+    post:
+      operationId: checkEmailBulk
+      summary: Check up to 100 emails in a single request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BulkRequest'
+      responses:
+        '200':
+          description: Bulk check results.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkResult'
+        '400':
+          $ref: '#/components/responses/Error'
+        '401':
+          $ref: '#/components/responses/Error'
+        '429':
+          $ref: '#/components/responses/Error'
+  /v1/health:
+    get:
+      operationId: getHealth
+      summary: Check API status. No authentication required.
+      security: []
+      responses:
+        '200':
+          description: API status.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+  responses:
+    Error:
+      description: Error response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    CheckRequest:
+      type: object
+      required: [email]
+      properties:
+        email:
+          type: string
+          description: The email address to check.
+    BulkRequest:
+      type: object
+      required: [emails]
+      properties:
+        emails:
+          type: array
+          maxItems: 100
+          items:
+            type: string
+    Check:
+      type: object
+      properties:
+        disposable:
+          type: boolean
+        email:
+          type: string
+        domain:
+          type: string
+        score:
+          type: integer
+          description: Risk score from 0 (safe) to 100 (definitely disposable).
+        reason:
+          type: string
+          enum: [blocklist_match, mx_invalid, suspicious_mx, domain_new, custom_block, custom_allow, clean]
+        mx_valid:
+          type: boolean
+        domain_age_days:
+          type: integer
+        cached:
+          type: boolean
+    BulkResult:
+      type: object
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Check'
+    Health:
+      type: object
+      properties:
+        status:
+          type: string
+        version:
+          type: string
+        timestamp:
+          type: string
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
