@@ -27,6 +27,8 @@ SDK operations: `create`.
 Key fields to recognise:
 
 - `email`: The email address to check.
+- `error`: Set on a bulk result item that could not be checked.
+- `reason`: Why the email was flagged. Values seen in the API source: `blocklist_match`, `mx_blocklist_match`, `mx_invalid`, `self_referencing_mx`, `suspicious_ip`, `suspicious_mx`, `domain_new`, `plus_addressing`, `suspicious_username`, `custom_block`, `custom_allow`, clean.
 - `score`: Risk score from 0 (safe) to 100 (definitely disposable).
 
 ### Health

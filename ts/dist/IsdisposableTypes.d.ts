@@ -12,6 +12,7 @@ export interface Check {
     domain?: string;
     domain_age_days?: number;
     email?: string;
+    error?: string;
     mx_valid?: boolean;
     reason?: string;
     score?: number;
@@ -22,6 +23,7 @@ export interface CheckCreateData {
     domain?: string;
     domain_age_days?: number;
     email?: string;
+    error?: string;
     mx_valid?: boolean;
     reason?: string;
     score?: number;

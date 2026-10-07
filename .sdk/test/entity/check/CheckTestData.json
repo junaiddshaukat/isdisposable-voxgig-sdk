@@ -4,34 +4,37 @@
       "CHECK00": {
         "cached": true,
         "disposable": false,
-        "domain": "s52",
-        "domain_age_days": 83,
-        "email": "s54",
-        "mx_valid": false,
-        "reason": "s56",
-        "score": 87,
+        "domain": "s5c",
+        "domain_age_days": 93,
+        "email": "s5e",
+        "error": "s5f",
+        "mx_valid": true,
+        "reason": "s61",
+        "score": 98,
         "id": "CHECK00"
       },
       "CHECK01": {
         "cached": true,
         "disposable": false,
-        "domain": "sa2",
-        "domain_age_days": 163,
-        "email": "sa4",
-        "mx_valid": false,
-        "reason": "sa6",
-        "score": 167,
+        "domain": "sb6",
+        "domain_age_days": 183,
+        "email": "sb8",
+        "error": "sb9",
+        "mx_valid": true,
+        "reason": "sbb",
+        "score": 188,
         "id": "CHECK01"
       },
       "CHECK02": {
         "cached": true,
         "disposable": false,
-        "domain": "sf2",
-        "domain_age_days": 243,
-        "email": "sf4",
-        "mx_valid": false,
-        "reason": "sf6",
-        "score": 247,
+        "domain": "s110",
+        "domain_age_days": 273,
+        "email": "s112",
+        "error": "s113",
+        "mx_valid": true,
+        "reason": "s115",
+        "score": 278,
         "id": "CHECK02"
       }
     }
@@ -41,12 +44,13 @@
       "check_ref01": {
         "cached": true,
         "disposable": false,
-        "domain": "s142",
-        "domain_age_days": 323,
-        "email": "s144",
-        "mx_valid": false,
-        "reason": "s146",
-        "score": 327
+        "domain": "s16a",
+        "domain_age_days": 363,
+        "email": "s16c",
+        "error": "s16d",
+        "mx_valid": true,
+        "reason": "s16f",
+        "score": 368
       }
     }
   },

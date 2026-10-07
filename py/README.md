@@ -261,8 +261,9 @@ API path: `/v1/check/bulk`
 | `domain` |  |
 | `domain_age_days` |  |
 | `email` | The email address to check. |
+| `error` | Set on a bulk result item that could not be checked. |
 | `mx_valid` |  |
-| `reason` |  |
+| `reason` | Why the email was flagged. |
 | `score` | Risk score from 0 (safe) to 100 (definitely disposable). |
 
 Operations: Create.
@@ -331,8 +332,9 @@ Create an instance: `check = client.Check()`
 | `domain` | `str` |  |
 | `domain_age_days` | `int` |  |
 | `email` | `str` | The email address to check. |
+| `error` | `str` | Set on a bulk result item that could not be checked. |
 | `mx_valid` | `bool` |  |
-| `reason` | `str` |  |
+| `reason` | `str` | Why the email was flagged. |
 | `score` | `int` | Risk score from 0 (safe) to 100 (definitely disposable). |
 
 #### Example: Create

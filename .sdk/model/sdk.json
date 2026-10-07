@@ -1,15 +1,6 @@
 {
-  "NAME": "ISDISPOSABLE",
-  "Name": "Isdisposable",
   "def": "isdisposable-openapi.yaml",
   "main": {
-    "api": {
-      "entity": {},
-      "guide": {}
-    },
-    "custom": {
-      "plurals": {}
-    },
     "def": {
       "desc": ""
     },
@@ -238,6 +229,14 @@
               "sh": "The email address to check.",
               "t": "`$STRING`"
             },
+            "error": {
+              "a": true,
+              "h": "Error",
+              "n": "error",
+              "r": false,
+              "sh": "Set on a bulk result item that could not be checked.",
+              "t": "`$STRING`"
+            },
             "mx_valid": {
               "a": true,
               "h": "Mx Valid",
@@ -250,6 +249,7 @@
               "h": "Reason",
               "n": "reason",
               "r": false,
+              "sh": "Why the email was flagged.",
               "t": "`$STRING`"
             },
             "score": {
@@ -805,8 +805,5 @@
     }
   },
   "name": "isdisposable",
-  "name-": "isdisposable",
-  "name_": "isdisposable",
-  "name__orig": "isdisposable",
   "origin": "voxgig-sdk"
 }

@@ -163,6 +163,12 @@ def make_config():
             "short": "The email address to check.",
           },
           {
+            "name": "error",
+            "title": "Error",
+            "type": "`$STRING`",
+            "short": "Set on a bulk result item that could not be checked.",
+          },
+          {
             "name": "mx_valid",
             "title": "Mx Valid",
             "type": "`$BOOLEAN`",
@@ -171,6 +177,7 @@ def make_config():
             "name": "reason",
             "title": "Reason",
             "type": "`$STRING`",
+            "short": "Why the email was flagged.",
           },
           {
             "name": "score",

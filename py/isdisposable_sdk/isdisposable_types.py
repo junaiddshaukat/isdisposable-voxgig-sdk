@@ -38,6 +38,7 @@ class Check(TypedDict, total=False):
     domain: str
     domain_age_days: int
     email: str
+    error: str
     mx_valid: bool
     reason: str
     score: int
@@ -49,6 +50,7 @@ class CheckCreateData(TypedDict, total=False):
     domain: str
     domain_age_days: int
     email: str
+    error: str
     mx_valid: bool
     reason: str
     score: int

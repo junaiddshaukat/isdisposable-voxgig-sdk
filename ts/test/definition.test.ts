@@ -39,10 +39,11 @@ const PLAN: any[] = [
           "email": "x",
           "domain": "x",
           "score": 1,
-          "reason": "blocklist_match",
+          "reason": "x",
           "mx_valid": true,
           "domain_age_days": 1,
-          "cached": true
+          "cached": true,
+          "error": "x"
         }
       ]
     },
@@ -77,10 +78,11 @@ const PLAN: any[] = [
       "email": "x",
       "domain": "x",
       "score": 1,
-      "reason": "blocklist_match",
+      "reason": "x",
       "mx_valid": true,
       "domain_age_days": 1,
-      "cached": true
+      "cached": true,
+      "error": "x"
     },
     "idField": "id"
   },

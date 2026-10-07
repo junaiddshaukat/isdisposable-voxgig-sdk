@@ -210,8 +210,9 @@ const check = client.Check()
 | `domain` | `string` | No |  |
 | `domain_age_days` | `number` | No |  |
 | `email` | `string` | No | The email address to check. |
+| `error` | `string` | No | Set on a bulk result item that could not be checked. |
 | `mx_valid` | `boolean` | No |  |
-| `reason` | `string` | No |  |
+| `reason` | `string` | No | Why the email was flagged. |
 | `score` | `number` | No | Risk score from 0 (safe) to 100 (definitely disposable). |
 
 ### Field Usage by Operation
@@ -223,6 +224,7 @@ const check = client.Check()
 | `domain` | - |
 | `domain_age_days` | - |
 | `email` | Yes |
+| `error` | - |
 | `mx_valid` | - |
 | `reason` | - |
 | `score` | - |

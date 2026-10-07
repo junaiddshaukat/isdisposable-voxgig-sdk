@@ -155,8 +155,9 @@ check = client.Check()
 | `domain` | `str` | No |  |
 | `domain_age_days` | `int` | No |  |
 | `email` | `str` | No | The email address to check. |
+| `error` | `str` | No | Set on a bulk result item that could not be checked. |
 | `mx_valid` | `bool` | No |  |
-| `reason` | `str` | No |  |
+| `reason` | `str` | No | Why the email was flagged. |
 | `score` | `int` | No | Risk score from 0 (safe) to 100 (definitely disposable). |
 
 ### Field Usage by Operation
@@ -168,6 +169,7 @@ check = client.Check()
 | `domain` | - |
 | `domain_age_days` | - |
 | `email` | Yes |
+| `error` | - |
 | `mx_valid` | - |
 | `reason` | - |
 | `score` | - |

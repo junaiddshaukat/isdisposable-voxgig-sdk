@@ -91,13 +91,16 @@ components:
         email:
           type: string
           description: The email address to check.
+          example: test@mailinator.com
     BulkRequest:
       type: object
       required: [emails]
       properties:
         emails:
           type: array
+          minItems: 1
           maxItems: 100
+          example: [user@mailinator.com, real@gmail.com]
           items:
             type: string
     Check:
@@ -114,13 +117,20 @@ components:
           description: Risk score from 0 (safe) to 100 (definitely disposable).
         reason:
           type: string
-          enum: [blocklist_match, mx_invalid, suspicious_mx, domain_new, custom_block, custom_allow, clean]
+          description: >
+            Why the email was flagged. Values seen in the API source:
+            blocklist_match, mx_blocklist_match, mx_invalid, self_referencing_mx,
+            suspicious_ip, suspicious_mx, domain_new, plus_addressing,
+            suspicious_username, custom_block, custom_allow, clean.
         mx_valid:
           type: boolean
         domain_age_days:
           type: integer
         cached:
           type: boolean
+        error:
+          type: string
+          description: Set on a bulk result item that could not be checked.
     BulkResult:
       type: object
       properties:

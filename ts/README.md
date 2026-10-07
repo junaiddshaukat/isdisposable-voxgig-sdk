@@ -314,8 +314,9 @@ API path: `/v1/check/bulk`
 | `domain` |  |
 | `domain_age_days` |  |
 | `email` | The email address to check. |
+| `error` | Set on a bulk result item that could not be checked. |
 | `mx_valid` |  |
-| `reason` |  |
+| `reason` | Why the email was flagged. |
 | `score` | Risk score from 0 (safe) to 100 (definitely disposable). |
 
 Operations: create.
@@ -384,8 +385,9 @@ Create an instance: `const check = client.Check()`
 | `domain` | `string` |  |
 | `domain_age_days` | `number` |  |
 | `email` | `string` | The email address to check. |
+| `error` | `string` | Set on a bulk result item that could not be checked. |
 | `mx_valid` | `boolean` |  |
-| `reason` | `string` |  |
+| `reason` | `string` | Why the email was flagged. |
 | `score` | `number` | Risk score from 0 (safe) to 100 (definitely disposable). |
 
 #### Example: Create
