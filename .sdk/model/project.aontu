@@ -25,12 +25,12 @@
 #   main: kit: target: ts: publish: registry: package: '@scope/name'
 
 
-main: kit: repo: path: 'junaiddshaukat/isdisposable-sdk'
+main: kit: repo: path: 'junaiddshaukat/isdisposable-voxgig-sdk'
 
 main: kit: publisher: {
   name: 'Junaid Shaukat'
   url: 'https://github.com/junaiddshaukat'
-  security: 'https://github.com/junaiddshaukat/isdisposable-sdk/security/advisories/new'
+  security: 'https://github.com/junaiddshaukat/isdisposable-voxgig-sdk/security/advisories/new'
 }
 
 main: kit: text: {

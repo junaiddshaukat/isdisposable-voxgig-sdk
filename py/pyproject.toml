@@ -15,9 +15,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/junaiddshaukat/isdisposable-sdk"
-Repository = "https://github.com/junaiddshaukat/isdisposable-sdk"
-Issues = "https://github.com/junaiddshaukat/isdisposable-sdk/issues"
+Homepage = "https://github.com/junaiddshaukat/isdisposable-voxgig-sdk"
+Repository = "https://github.com/junaiddshaukat/isdisposable-voxgig-sdk"
+Issues = "https://github.com/junaiddshaukat/isdisposable-voxgig-sdk/issues"
 
 # ONE package. core/entity/feature/utility were previously top-level packages;
 # those names are real PyPI distributions and common scratch filenames, and

@@ -8,7 +8,7 @@
 # SET UP ONCE, by a maintainer with publish rights — see .sdk/PUBLISHING.md:
 #
 #   npm trust github @voxgig-sdk/isdisposable-sdk \
-#     --repository junaiddshaukat/isdisposable-sdk \
+#     --repository junaiddshaukat/isdisposable-voxgig-sdk \
 #     --file publish-ts.yml \
 #     --allow-publish
 #

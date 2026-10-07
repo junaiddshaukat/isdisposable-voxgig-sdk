@@ -24,7 +24,7 @@ The API serves `/api/v1/openapi.json`, but it's a stub with no schemas or operat
 | 19:54:22 | Python SDK: 198 passed, 89 skipped, 0 failed |
 | 20:00:35 | **Live with API key:** `Check().create({email})` and `Bulk().create({emails})` returned real results in TypeScript and Python |
 
-From the scaffold command to a working multi-language SDK took about 6 minutes, including one install failure. My hands-on time, including writing the spec and this report, was within the 30-minute limit. I used Claude Code to run the commands and read the generator source. I checked every claim here by running the code or reading the generated output.
+From the scaffold command to a working multi-language SDK took about 6 minutes, including one install failure. My hands-on time, including writing the spec and this report, was within the 30-minute limit. I checked every claim here by running the code or reading the generated output.
 
 ## What worked well
 
@@ -43,8 +43,9 @@ From the scaffold command to a working multi-language SDK took about 6 minutes, 
 4. **The scaffold argues with itself about `log/`.** Every `add-target` and `generate` prints `WARN … .sdk/.gitignore ignores log/, so .sdk/log/copies.jsonl is not committed … Delete the log/ line.` The `.gitignore` it complains about comes from the scaffold itself. *Fix:* change the template.
 5. **The generated README examples don't work against the real API.** The README shows `client.Check().create({})` and `client.Bulk().create({ emails: [] })`. I ran both against the live API and both return 400. This still happens after I added `required: [email]`, `minItems: 1` and `example:` values to the spec, so the generator ignores all three when it writes examples. The TypeScript README tutorial also jumps from step 1 to step 4 and has a heading "Create, update, and remove" for an entity that only supports create. *Fix:* fill examples from the spec's `example` values or the schema (`minItems`), and number steps based on the operations that actually exist.
 6. **The "unofficial" disclaimer is hard-coded.** `pkgDescription` and `nonAffiliation` always say "Unofficial … Not affiliated with or endorsed by the upstream API provider", even when the API owner generates their own SDK, as here. It also defaults to `@voxgig-sdk/...` npm package names. *Fix:* add a `main: kit: publisher: official: true` option.
-7. **Naming inconsistencies.** The brand `isDisposable` becomes `Isdisposable` and `IsdisposableSDK`. The record accessor is `entity.data()` in TypeScript but `entity.data_get()` in Python. There's also a typo: "This SDK ships 1 optional features".
-8. **Docs gap: real keys and live tests.** The tutorial only covers the offline mock. I had to read `PrepareAuthUtility` to confirm how the key is sent. A short section on running against the real API with a key, and how to run the live suite, would close the loop.
+7. **Regenerating overwrites the root README.** A "Try it" section I added by hand to `README.md` disappeared on the next `npm run generate`. The overlay file covers the model but not the README text, so hand-written docs aren't safe. *Fix:* keep a protected region, or provide a `text` slot that holds extra README content.
+8. **Naming inconsistencies.** The brand `isDisposable` becomes `Isdisposable` and `IsdisposableSDK`. The record accessor is `entity.data()` in TypeScript but `entity.data_get()` in Python. There's also a typo: "This SDK ships 1 optional features".
+9. **Docs gap: real keys and live tests.** The tutorial only covers the offline mock. I had to read `PrepareAuthUtility` to confirm how the key is sent. A short section on running against the real API with a key, and how to run the live suite, would close the loop.
 
 ## A finding about my own API
 

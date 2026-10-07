@@ -9,6 +9,6 @@ if [[ ! -f "$trust" ]]; then
   exit 1
 fi
 exec node "$trust" \
-  --repository 'junaiddshaukat/isdisposable-sdk' \
+  --repository 'junaiddshaukat/isdisposable-voxgig-sdk' \
   --publish '@voxgig-sdk/isdisposable-sdk=publish-ts.yml' \
   "$@"

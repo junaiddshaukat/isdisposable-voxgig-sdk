@@ -67,7 +67,7 @@ above and leaves a package that is already set up alone; for the
 `ts` target it runs:
 
     npm trust github @voxgig-sdk/isdisposable-sdk \
-      --repository junaiddshaukat/isdisposable-sdk \
+      --repository junaiddshaukat/isdisposable-voxgig-sdk \
       --file publish-ts.yml \
       --allow-publish
 

@@ -1,6 +1,15 @@
 {
+  "NAME": "ISDISPOSABLE",
+  "Name": "Isdisposable",
   "def": "isdisposable-openapi.yaml",
   "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
     "def": {
       "desc": ""
     },
@@ -620,12 +629,12 @@
       },
       "publisher": {
         "name": "Junaid Shaukat",
-        "security": "https://github.com/junaiddshaukat/isdisposable-sdk/security/advisories/new",
+        "security": "https://github.com/junaiddshaukat/isdisposable-voxgig-sdk/security/advisories/new",
         "url": "https://github.com/junaiddshaukat"
       },
       "repo": {
         "host": "github.com",
-        "path": "junaiddshaukat/isdisposable-sdk"
+        "path": "junaiddshaukat/isdisposable-voxgig-sdk"
       },
       "target": {
         "py": {
@@ -805,5 +814,8 @@
     }
   },
   "name": "isdisposable",
+  "name-": "isdisposable",
+  "name_": "isdisposable",
+  "name__orig": "isdisposable",
   "origin": "voxgig-sdk"
 }

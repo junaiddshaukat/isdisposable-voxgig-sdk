@@ -2,11 +2,11 @@
 
 ## Reporting a vulnerability
 
-Please report security issues to https://github.com/junaiddshaukat/isdisposable-sdk/security/advisories/new.
+Please report security issues to https://github.com/junaiddshaukat/isdisposable-voxgig-sdk/security/advisories/new.
 
 Do not open public GitHub issues for suspected vulnerabilities.
 
-For non-security bugs, use the issue tracker: https://github.com/junaiddshaukat/isdisposable-sdk/issues
+For non-security bugs, use the issue tracker: https://github.com/junaiddshaukat/isdisposable-voxgig-sdk/issues
 
 ## Scope
 

@@ -9,13 +9,13 @@
     "api-client",
     "isdisposable"
   ],
-  "homepage": "https://github.com/junaiddshaukat/isdisposable-sdk#readme",
+  "homepage": "https://github.com/junaiddshaukat/isdisposable-voxgig-sdk#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/junaiddshaukat/isdisposable-sdk.git"
+    "url": "git+https://github.com/junaiddshaukat/isdisposable-voxgig-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/junaiddshaukat/isdisposable-sdk/issues"
+    "url": "https://github.com/junaiddshaukat/isdisposable-voxgig-sdk/issues"
   },
   "main": "dist/IsdisposableSDK.js",
   "type": "commonjs",
